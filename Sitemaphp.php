@@ -656,7 +656,8 @@ EOD;
 
 }
 
-// Testing
+/********************************** Testing ***********************************************
+
 try {
 $a = new SitemapHP('sitemap.xml', SITEMAP_TYPE_XML, system('pwd'));
 
@@ -690,7 +691,7 @@ $a->addMobile();
 $a->addURL('http://www.example7.com');
 
 
-/* Force errors */
+// Force errors 
 echo "Add new invalid URL\n";
 //$a->addURL('NotAnURL');
 echo "Add new invalid changefreq\n";
@@ -704,3 +705,5 @@ catch (SitemapHPException $e) {
 catch (Exception $e) {
     echo 'An error has occured: ',  $e->getMessage(), "\n";
 }
+
+********************************** /Testing ***********************************************/
